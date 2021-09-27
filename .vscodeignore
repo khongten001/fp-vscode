@@ -1,0 +1,11 @@
+# dirs
+.vscode/
+node_modules/
+images/help/
+fptools/
+
+# files
+*.vsix
+*.package-lock.json
+bin/fpc.xml
+bin/pas2js.xml 

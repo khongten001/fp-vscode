@@ -1,0 +1,10 @@
+# dirs
+.vscode/
+backup/
+bin/
+lib/
+node_modules/ 
+
+# files
+*.vsix
+package-lock.json

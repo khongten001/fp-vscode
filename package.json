@@ -1,0 +1,168 @@
+{
+	"name": "fp-vscode",
+	"displayName": "fp-vscode",
+	"description": "Freepascal support for Visual Studio Code",
+	"version": "1.0.5",
+	"engines": {
+		"vscode": "^1.52.0"
+	},
+	"categories": [
+		"Programming Languages",
+		"Linters",
+		"Formatters",
+		"Snippets"
+	],
+	"keywords": [
+		"pascal",
+		"delphi",
+		"freepascal",
+		"lazarus",
+		"pas2js",
+		"fpc"
+	],
+	"license": "SEE LICENSE IN ./LICENSE.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/heliosroots/fp-vscode"
+	},
+	"icon": "images/icon.png",
+	"publisher": "heliosroots",
+	"main": "./sources/extension.js",
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "objectpascal",
+				"extensions": [
+					".pas",
+					".pp",
+					".lpr",
+					".inc"
+				],
+				"aliases": [
+					"ObjectPascal",
+					"Pascal"
+				],
+				"mimetypes": [
+					"text/x-objectpascal-source",
+					"text/x-objectpascal"
+				]
+			}
+		],
+		"grammars": [
+			{
+				"language": "objectpascal",
+				"scopeName": "source.objectpascal",
+				"path": "./sintaxes/objectpascal.plist"
+			}
+		],
+		"snippets": [
+			{
+				"language": "objectpascal",
+				"path": "./snippets/objectpascal.json"
+			}
+		],
+		"problemMatchers": [
+			{
+				"name": "freepascal",
+				"fileLocation": [
+					"absolute"
+				],
+				"pattern": {
+					"regexp": "^([^(]+)\\(([0-9]+),([0-9]+)\\) ([A-Za-z]+): (.+)$",
+					"file": 1,
+					"line": 2,
+					"column": 3,
+					"severity": 4,
+					"message": 5
+				}
+			}
+		],
+		"commands": [
+			{
+				"command": "freepascal.projectLoading",
+				"title": "Freepascal: Project loading..."
+			},
+			{
+				"command": "freepascal.projectCreation",
+				"title": "Freepascal: Project new..."
+			},
+			{
+				"command": "freepascal.projectBuilding",
+				"title": "Freepascal: Project building..."
+			},
+			{
+				"command": "freepascal.codeCompletion",
+				"title": "Freepascal: Code completion..."
+			},
+			{
+				"command": "freepascal.codeIndentation",
+				"title": "Freepascal: Code formatting..."
+			}
+		],
+		"keybindings": [
+			{
+				"command": "freepascal.projectBuilding",
+				"key": "F9",
+				"when": "!inDebugMode"
+			},
+			{
+				"command": "freepascal.projectLoading",
+				"key": "F10",
+				"when": "!inDebugMode"
+			},
+			{
+				"command": "freepascal.codeCompletion",
+				"key": "Ctrl+Shift+C",
+				"when": "editorTextFocus && !editorReadonly && editorLangId == 'objectpascal'"
+			},
+			{
+				"command": "freepascal.codeIndentation",
+				"key": "Ctrl+D",
+				"when": "editorTextFocus && !editorReadonly && editorLangId == 'objectpascal'"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Freepascal",
+			"properties": {
+				"freepascal.executable": {
+					"type": "string",
+					"default": "",
+					"description": "\"Freepascal\" executable."
+				},
+				"freepascal.sources": {
+					"type": "string",
+					"default": "",
+					"description": "\"Freepascal\" sources."
+				},
+				"pas2js.executable": {
+					"type": "string",
+					"default": "",
+					"description": "\"Pas2JS\" executable."
+				},
+				"pas2js.sources": {
+					"type": "string",
+					"default": "",
+					"description": "\"Pas2JS\" sources."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"publish": "vsce package"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.52.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.15.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.1.2",
+		"vscode-test": "^1.4.1"
+	}
+}
