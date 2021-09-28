@@ -39,7 +39,7 @@ Syntax Coloring
 ![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/syntaxcoloring.gif)  
 
 ### Settings
-![settings](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/settings.png)
+![settings](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/settings.gif)
 
 ### Reporting Issues
 https://github.com/heliosroots/fp-vscode/issues
