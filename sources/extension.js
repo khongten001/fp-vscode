@@ -1,8 +1,9 @@
 const vscode = require("vscode"); 
 const { codeCompletion } = require("./codecompletion");
-const { CodeDefinition } = require("./codedefinition");
 const { codeIndentation } = require("./codeindentation");
-const { CodeSuggestion } = require("./codesuggestion");
+const { codeRefactoring } = require("./coderefactoring");
+const { provideCompletionItems } = require("./codesuggestion");
+const { provideDefinition } = require("./codedefinition");
 const { projectBuilding } = require("./projectbuilding");
 const { projectCreation } = require("./projectcreation");
 const { projectLoading } = require("./projectsettings");
@@ -15,10 +16,11 @@ const activate = (context) => {
         vscode.commands.registerCommand("freepascal.projectBuilding", projectBuilding),  
         vscode.commands.registerCommand('freepascal.codeCompletion', codeCompletion),
         vscode.commands.registerCommand('freepascal.codeIndentation', codeIndentation),
+        vscode.commands.registerCommand('freepascal.codeRefactoring', codeRefactoring),
         
         // Languages
-        vscode.languages.registerDefinitionProvider("objectpascal", new CodeDefinition),
-        vscode.languages.registerCompletionItemProvider("objectpascal", new CodeSuggestion, "."),
+        vscode.languages.registerDefinitionProvider("objectpascal", { provideDefinition }),
+        vscode.languages.registerCompletionItemProvider("objectpascal", { provideCompletionItems }, "."),
     ])
 };
 

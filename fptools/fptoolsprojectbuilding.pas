@@ -51,7 +51,7 @@ begin
       VCompiler := ARequest.Path('config.pas2js.executable', '');
       if (not (FileExistsUTF8(VCompiler))) then
       begin
-        WriteStdout('Compiler pas2js no found: "' + VCompiler + '"');
+        WriteStdout('Compiler Pas2JS no found: "' + VCompiler + '"');
       end;
     end
     else
@@ -59,7 +59,7 @@ begin
       VCompiler := ARequest.Path('config.freepascal.executable', '');
       if (not (FileExistsUTF8(VCompiler))) then
       begin
-        WriteStdout('Compiler freepascal no found: "' + VCompiler + '"');
+        WriteStdout('Compiler Freepascal no found: "' + VCompiler + '"');
       end;
     end;
     VCommand += VCompiler;

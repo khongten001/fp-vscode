@@ -32,7 +32,8 @@ type
 
 const
   LE = LineEnding;
-
+                     
+function Ternary(ACondition: boolean; AConsequence, Alternative: string): string;
 function ExpandPaths(APaths, ABaseDir: string; AIncludeBefore: string = ''): string;
 function ReadFile(AFileName: string): string;
 function WriteFile(AFileName, AData: string; AAppend: boolean = False): boolean;
@@ -40,7 +41,19 @@ procedure WriteLog(AMessage: string);
 procedure WriteStdout(AData: TJSONData; ASuccess: boolean = False); overload;
 procedure WriteStdout(AData: string; ASuccess: boolean = False); overload;
 
-implementation
+implementation    
+
+function Ternary(ACondition: boolean; AConsequence, Alternative: string): string;
+begin
+  if (ACondition) then
+  begin
+    Result := AConsequence;
+  end
+  else
+  begin
+    Result := Alternative;
+  end;
+end;
 
 function ExpandPaths(APaths, ABaseDir: string; AIncludeBefore: string): string;
 var
@@ -143,7 +156,7 @@ var
 begin
   VJSON := TJSONObject.Create;
   try
-    VJSON.Add('success', ASuccess);  
+    VJSON.Add('success', ASuccess);
     VJSON.Add('data', AData);
     // Stdout
     Write(VJSON.FormatJSON(AsCompressedJSON));

@@ -8,14 +8,15 @@ const validName = (text) => {
     return null;
 };
 
-const projectCreation = async () => { 
+const projectCreation = async () => {
     let template = await showListBox(
         "Select a template...",
         [
             "Application",
             "Application Node",
             "Application Web Browser",
-            "Library"
+            "Library",
+            "Settings"
         ]
     );
     if (!template) {
@@ -40,7 +41,12 @@ const projectCreation = async () => {
     };
     // Loading 
     project.settings = response.data.settings;
-    editorOpenFile(response.data.project); 
+    if (response.data.project) {
+        editorOpenFile(response.data.project)
+    }
+    else if (response.data.settings) {
+        editorOpenFile(response.data.settings);
+    }
 };
 
 module.exports = {

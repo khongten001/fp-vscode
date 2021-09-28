@@ -6,7 +6,7 @@
             "  $1",
             "end;"
         ],
-        "description": "begin-end"
+        "description": "snippets"
     },
     "if-then-begin-end": {
         "prefix": "if-then-begin-end",
@@ -16,7 +16,7 @@
             "  $2",
             "end;"
         ],
-        "description": "if-then-begin-end"
+        "description": "snippets"
     },
     "if-then-begin-end-else-begin-end": {
         "prefix": "if-then-begin-end-else-begin-end",
@@ -30,7 +30,7 @@
             "  $3",
             "end;"
         ],
-        "description": "if-then-begin-end-else-begin-end"
+        "description": "snippets"
     },
     "with-do-begin-end": {
         "prefix": "with-do-begin-end",
@@ -40,7 +40,7 @@
             "  $2",
             "end;"
         ],
-        "description": "with-do-begin-end"
+        "description": "snippets"
     },
     "case-end": {
         "prefix": "case-end",
@@ -49,7 +49,7 @@
             "  $2",
             "end;"
         ],
-        "description": "case-end"
+        "description": "snippets"
     },
     "for-to-do-begin-end": {
         "prefix": "for-to-do-begin-end",
@@ -59,7 +59,7 @@
             "  $4",
             "end;"
         ],
-        "description": "for-to-do-begin-end"
+        "description": "snippets"
     },
     "for-in-do-begin-end": {
         "prefix": "for-in-do-begin-end",
@@ -69,7 +69,7 @@
             "  $3",
             "end;"
         ],
-        "description": "for-in-do-begin-end"
+        "description": "snippets"
     },
     "while-do-begin-end": {
         "prefix": "while-do-begin-end",
@@ -79,7 +79,7 @@
             "  $2",
             "end;"
         ],
-        "description": "while-do-begin-end"
+        "description": "snippets"
     },
     "repeat-until": {
         "prefix": "repeat-until",
@@ -88,7 +88,7 @@
             "  $1",
             "until"
         ],
-        "description": "repeat-until"
+        "description": "snippets"
     },
     "try-finally-end": {
         "prefix": "try-finally-end",
@@ -99,7 +99,7 @@
             "  $2",
             "end;"
         ],
-        "description": "try-finally-end"
+        "description": "snippets"
     },
     "try-except-end": {
         "prefix": "try-except-end",
@@ -110,7 +110,15 @@
             "  $2",
             "end;"
         ],
-        "description": "try-except-end"
+        "description": "snippets"
+    },
+    "iinterface-end": {
+        "prefix": "iinterface-end",
+        "body": [
+            "I${1:Name} = interface$2['{${UUID}}']", 
+            "end;"
+        ],
+        "description": "snippets"
     },
     "tclass-private-public-end": {
         "prefix": "tclass-private-public-end",
@@ -122,42 +130,42 @@
             "  destructor Destroy; override; $2",
             "end;"
         ],
-        "description": "tclass-private-public-end"
+        "description": "snippets"
     }, 
     "constructor": {
         "prefix": "constructor",
         "body": [
             "constructor Create(${1:Params}); ${2:override};"
         ],
-        "description": "constructor"
+        "description": "snippets"
     },
     "destructor": {
         "prefix": "destructor",
         "body": [
             "destructor Destroy; override;$0"
         ],
-        "description": "destructor"
+        "description": "snippets"
     },
     "function": {
         "prefix": "function",
         "body": [
             "function ${1:Name}(${2:Params}):${3:string};"
         ],
-        "description": "function"
+        "description": "snippets"
     },
     "procedure": {
         "prefix": "procedure",
         "body": [
             "procedure ${1:Name}(${2:Params});"
         ],
-        "description": "procedure"
+        "description": "snippets"
     }, 
     "property-gettter-setter": {
         "prefix": "property-gettter-setter",
         "body": [
             "property ${1:Name}: ${2:string} read Get${1:Name} write Set${1:Name};"
         ],
-        "description": "property-gettter-setter"
+        "description": "snippets"
     }, 
     "function-begin-end": {
         "prefix": "function-begin-end",
@@ -167,7 +175,7 @@
             "\t$0",
             "end;"
         ],
-        "description": "function-begin-end"
+        "description": "snippets"
     },
     "procedure-begin-end": {
         "prefix": "procedure-begin-end",
@@ -177,7 +185,7 @@
             "  $0",
             "end;"
         ],
-        "description": "procedure-begin-end"
+        "description": "snippets"
     },
     "unit-interface-implementation-end": {
         "prefix": "unit-interface-implementation-end",
@@ -195,6 +203,6 @@
             "",
             "end."
         ],
-        "description": "unit-interface-implementation-end"
+        "description": "snippets"
     }
 }

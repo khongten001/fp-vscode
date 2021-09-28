@@ -100,9 +100,18 @@
 			{
 				"command": "freepascal.codeIndentation",
 				"title": "Freepascal: Code formatting..."
+			},
+			{
+				"command": "freepascal.codeRefactoring",
+				"title": "Freepascal: Code refactoring..."
 			}
 		],
 		"keybindings": [
+			{
+				"command": "freepascal.projectCreation",
+				"key": "Ctrl+N",
+				"when": "!inDebugMode"
+			},
 			{
 				"command": "freepascal.projectBuilding",
 				"key": "F9",
@@ -115,12 +124,17 @@
 			},
 			{
 				"command": "freepascal.codeCompletion",
-				"key": "Ctrl+Shift+C",
+				"key": "Ctrl+Alt+C",
 				"when": "editorTextFocus && !editorReadonly && editorLangId == 'objectpascal'"
 			},
 			{
 				"command": "freepascal.codeIndentation",
-				"key": "Ctrl+D",
+				"key": "Ctrl+Alt+D",
+				"when": "editorTextFocus && !editorReadonly && editorLangId == 'objectpascal'"
+			},
+			{
+				"command": "freepascal.codeRefactory",
+				"key": "Ctrl+Alt+R",
 				"when": "editorTextFocus && !editorReadonly && editorLangId == 'objectpascal'"
 			}
 		],

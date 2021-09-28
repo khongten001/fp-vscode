@@ -17,60 +17,45 @@ uses
   // fptools
   fptoolsutils;
 
-function TemplateSettings(AName, APlataform, VOptions: string): string;
-var
-  VTemplate: string;
+function TemplateSettings(AName, APlataform: string;
+  VOptions: string = '-Jeutf-8 -Ji''' + 'rtl.js' + ''' -Jc -Jminclude'): string;
 begin
-  VTemplate := '{' + LE;
-  VTemplate += '    "project": "./' + AName + '.lpr",' + LE;
-  VTemplate += '    "searchDir": [],' + LE;
-  VTemplate += '    "includeDir": [],' + LE;
-  VTemplate += '    "outputDir": "",' + LE;
-  VTemplate += '    "plataform": "' + APlataform + '",' + LE;
-  VTemplate += '    "customOptions": "' + VOptions + '"' + LE;
-  VTemplate += '}';
-  Result := VTemplate;
+  Result := '{' + LE;
+  Result += '    "project": "' + Ternary(AName = '', '",', './' + AName + '.lpr",') + LE;
+  Result += '    "searchDir": [],' + LE;
+  Result += '    "includeDir": [],' + LE;
+  Result += '    "outputDir": "",' + LE;
+  Result += '    "plataform": "' + APlataform + '",' + LE;
+  Result += '    "customOptions": "' + VOptions + '"' + LE;
+  Result += '}';
 end;
 
 function TemplateProject(AName: string; AIsLibrary: boolean = False): string;
-var
-  VTemplate: string;
 begin
-  if (AIsLibrary) then
-  begin
-    VTemplate := 'library ' + AName + ';' + LE + LE;
-  end
-  else
-  begin
-    VTemplate := 'program ' + AName + ';' + LE + LE;
-  end;
-  VTemplate += '{$mode objfpc}{$H+}' + LE + LE;
-  VTemplate += 'uses' + LE;
-  VTemplate += '  Classes;' + LE + LE;
-  VTemplate += 'begin' + LE;
-  VTemplate += 'end.';
-  Result := VTemplate;
+  Result := Ternary(AIsLibrary, 'library ', 'program ') + AName + ';' + LE + LE;
+  Result += '{$mode objfpc}{$H+}' + LE + LE;
+  Result += 'uses' + LE;
+  Result += '  Classes;' + LE + LE;
+  Result += 'begin' + LE;
+  Result += 'end.';
 end;
 
 function TemplateHtml(AName: string): string;
-var
-  VTemplate: string;
 begin
-  VTemplate := '<!doctype html>' + LE;
-  VTemplate += '<html lang="en">' + LE;
-  VTemplate += '<head>' + LE;
-  VTemplate += '    <meta http-equiv="Content-type" content="text/html; charset=utf-8">'
+  Result := '<!doctype html>' + LE;
+  Result += '<html lang="en">' + LE;
+  Result += '<head>' + LE;
+  Result += '    <meta http-equiv="Content-type" content="text/html; charset=utf-8">'
     + LE;
-  VTemplate += '    <meta name="viewport" content="width=device-width, initial-scale=1">'
+  Result += '    <meta name="viewport" content="width=device-width, initial-scale=1">'
     + LE;
-  VTemplate += '    <title>' + AName + '</title>' + LE;
-  VTemplate += '    <script src="./' + AName + '.js"></script>' + LE;
-  VTemplate += '</head>' + LE;
-  VTemplate += '<body>' + LE;
-  VTemplate += '    <script>rtl.run();</script>' + LE;
-  VTemplate += '</body>' + LE;
-  VTemplate += '</html>';
-  Result := VTemplate;
+  Result += '    <title>' + AName + '</title>' + LE;
+  Result += '    <script src="./' + AName + '.js"></script>' + LE;
+  Result += '</head>' + LE;
+  Result += '<body>' + LE;
+  Result += '    <script>rtl.run();</script>' + LE;
+  Result += '</body>' + LE;
+  Result += '</html>';
 end;
 
 procedure CreateAplication(ADir, AName: string);
@@ -124,8 +109,7 @@ begin
   end;
   // Save
   WriteFile(VProject, TemplateProject(AName));
-  WriteFile(VSettings, TemplateSettings(AName, 'node',
-    '-Jeutf-8 -Jirtl.js -Jc -Jminclude'));
+  WriteFile(VSettings, TemplateSettings(AName, 'node'));
   VResponse := TJSONObject.Create();
   VResponse.Add('project', VProject);
   VResponse.Add('settings', VSettings);
@@ -160,8 +144,7 @@ begin
   end;
   // Save
   WriteFile(VProject, TemplateProject(AName));
-  WriteFile(VSettings, TemplateSettings(AName, 'webbrowser',
-    '-Jeutf-8 -Ji./rtl.js -Jc -Jminclude'));
+  WriteFile(VSettings, TemplateSettings(AName, 'webbrowser'));
   WriteFile(VHtml, TemplateHtml(AName));
   VResponse := TJSONObject.Create();
   VResponse.Add('project', VProject);
@@ -199,6 +182,28 @@ begin
   WriteStdout(VResponse, True);
 end;
 
+
+procedure CreateSettings(ADir, AName: string);
+var
+  VSettings: string;
+  VResponse: TJSONObject;
+begin
+  if (not (DirectoryIsWritable(ADir))) then
+  begin
+    WriteStdout('Invalid project directory: "' + ADir + '"');
+  end;
+  VSettings := AppendPathDelim(ADir) + AName + '.lpr.json';
+  if (FileExistsUTF8(VSettings)) then
+  begin
+    WriteStdout(AName + '.lpr.json already exists');
+  end;
+  // Save
+  WriteFile(VSettings, TemplateSettings('', '', ''));
+  VResponse := TJSONObject.Create();
+  VResponse.Add('settings', VSettings);
+  WriteStdout(VResponse, True);
+end;
+
 procedure ProjectCreation(ARequest: TJSONData);
 var
   VDir: string;
@@ -213,6 +218,7 @@ begin
     'Application Node': CreateAplicationNode(VDir, VName);
     'Application Web Browser': CreateAplicationWebBrowser(VDir, VName);
     'Library': CreateLibrary(VDir, VName);
+    'Settings': CreateSettings(VDir, VName);
     else
     begin
       WriteStdout('Invalid project template');

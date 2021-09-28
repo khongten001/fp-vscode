@@ -101,7 +101,15 @@
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
+        <Filename Value="fptoolscoderefactoring.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
         <Filename Value="fptoolscodesuggestion.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="fptoolsprojectbuilding.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
@@ -110,10 +118,6 @@
       </Unit>
       <Unit>
         <Filename Value="fptoolsprojectsettings.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="fptoolsprojectbuilding.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
     </Units>

@@ -12,8 +12,10 @@ procedure CodeSuggestion(ARequest: TJSONData);
 implementation
 
 uses
+  Sysutils,
   CodeToolManager,
   CodeCache,
+  CodeTree,
   IdentCompletionTool,
   // fptools
   fptoolsutils,
@@ -29,6 +31,7 @@ var
   VIdentifierListItem: TIdentifierListItem;
   VIndex: integer;
   VResponse: TJSONArray;
+  VResponseItem: TJSONObject;
 begin
   CodetoolsLoad(ARequest);
   CodetoolsUpdate(ARequest);
@@ -56,8 +59,66 @@ begin
     for VIndex := 0 to (VIdentifierList.GetFilteredCount - 1) do
     begin
       VIdentifierListItem := VIdentifierList.FilteredItems[VIndex];
-      VResponse.Add(VIdentifierListItem.Identifier);
-      // TODO: kind, detail...
+      VResponseItem := TJSONObject.Create();
+      VResponseItem.Add('identifier', VIdentifierListItem.Identifier);
+      case VIdentifierListItem.GetDesc of
+        // unit    
+        ctnUseUnit,
+        ctnUseUnitClearName,
+        ctnUseUnitNamespace,
+        ctnUnit:
+        begin
+          VResponseItem.Add('kind', 10); 
+          VResponseItem.Add('detail', 'Unit');
+        end;
+        // function/procedure/method
+        ctnGlobalProperty,
+        ctnProcedureType,
+        ctnProcedure:
+        begin
+          VResponseItem.Add('kind', 2);  
+          VResponseItem.Add('detail', 'Function/Procedure');
+        end;
+        // type
+        ctnTypeType,
+        ctnFileType,
+        ctnPointerType,
+        ctnClassOfType,
+        ctnVariantType,
+        ctnGenericType,
+        ctnTypeDefinition,
+        ctnVarDefinition:
+        begin
+          VResponseItem.Add('kind', 24);   
+          VResponseItem.Add('detail', 'Type');
+        end;
+        // const
+        ctnConstDefinition,
+        ctnConstant:
+        begin
+          VResponseItem.Add('kind', 20);   
+          VResponseItem.Add('detail', 'Const');
+        end;
+        // property
+        ctnProperty:
+        begin
+          VResponseItem.Add('kind', 9);  
+          VResponseItem.Add('detail', 'Property');
+        end;
+        // Enum
+        ctnEnumIdentifier,
+        ctnEnumerationType:
+        begin
+          VResponseItem.Add('kind', 19);
+          VResponseItem.Add('detail', 'Enum');
+        end;
+        else
+        begin
+          VResponseItem.Add('kind', -1);  
+          VResponseItem.Add('detail', IntToStr( VIdentifierListItem.GetDesc));
+        end;
+      end;
+      VResponse.Add(VResponseItem);
     end;
     WriteStdout(VResponse, True);
   end

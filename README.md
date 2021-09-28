@@ -2,8 +2,8 @@
 ![logo](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/icon.png)
 
 ### Features
-Project Manager(F10)
-![project manager](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/projectmanager.gif) 
+Project Template(F10)
+![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/projectmanager.gif) 
 Project Builder(F9)  
 ![project builder](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codesnipptes.gif) 
 Code Definition 

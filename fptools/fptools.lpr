@@ -11,6 +11,7 @@ uses
   fptoolscodecompletation, 
   fptoolscodedefinition,  
   fptoolscodeindentation,
+  fptoolscoderefactoring,
   fptoolscodesuggestion,
   fptoolsprojectbuilding,
   fptoolsprojectcreation,
@@ -41,7 +42,9 @@ begin
         case VAction of     
           'codeCompletion': CodeCompletion(VRequest);
           'codeDefinition': CodeDefinition(VRequest);
-          'codeIndentation': CodeIndentation(VRequest);
+          'codeIndentation': CodeIndentation(VRequest);  
+          'codeRefactoringEmptyMethods': CodeRefactoringEmptyMethods(VRequest);    
+          'codeRefactoringUnusedUnits': CodeRefactoringUnusedUnits(VRequest);
           'codeSuggestion': CodeSuggestion(VRequest);    
           'projectBuilding': ProjectBuilding(VRequest);
           'projectCreation': ProjectCreation(VRequest);  
@@ -60,4 +63,5 @@ begin
   finally
     FreeAndNil(VRequest);
   end;
+
 end.
