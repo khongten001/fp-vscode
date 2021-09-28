@@ -1,4 +1,4 @@
-LICENSE AND COPYRIGHT INFORMATION ABOUT IMAGES USED IN FP-VSCODE
+LICENSE AND COPYRIGHT INFORMATION ABOUT FILES USED IN FP-VSCODE
 --------------------------------------------------------------------
  
 Author and source mentioned.

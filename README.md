@@ -1,21 +1,42 @@
 ## Freepascal support for Visual Studio Code
 ![logo](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/icon.png)
 
-### Features
-Project Template(F10)
-![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/projectmanager.gif) 
-Project Builder(F9)  
-![project builder](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codesnipptes.gif) 
-Code Definition 
-![code definition](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codedefinition.gif) 
- Code Completion(Ctrl+Shift+C) 
-![code completation](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codecompletation.gif) 
-Code Formatter(Ctrl+D)
-![code formatter](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codeformatter.gif) 
-Code Suggestion  
-![code suggestion](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codesuggestion.gif)
-Syntax Coloring 
-![syntaxcoloring](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/syntaxcoloring.png)
+### Features 
+Project new... (CTR+N)
+![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/projectcreation.gif) 
+
+Project building... (F9)
+![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/projectbuilding.gif) 
+
+Project loading... (F10)
+![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/projectloading.gif) 
+
+Project settings...
+![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/projectsettings.gif) 
+
+Project completion...(Ctrl+Alt+C)
+![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codecompletion.gif) 
+
+Project definition...
+![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codedefinition.gif) 
+
+Project indentation...(Ctrl+Alt+D)
+![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codeindentation.gif) 
+
+Project suggestion...
+![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codesuggestion.gif) 
+
+Project refactory empty methods...(Ctrl+Alt+R)
+![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/coderefactoryemptymethods.gif) 
+
+Project refactory unused units...(Ctrl+Alt+R)
+![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/coderefactoryunusedunits.gif) 
+
+Project snippets
+![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codesnippets.gif)  
+
+Syntax Coloring
+![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/syntaxcoloring.gif)  
 
 ### Settings
 ![settings](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/settings.png)
