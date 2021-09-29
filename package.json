@@ -2,7 +2,7 @@
 	"name": "fp-vscode",
 	"displayName": "fp-vscode",
 	"description": "Freepascal support for Visual Studio Code",
-	"version": "1.0.5",
+	"version": "1.0.9",
 	"engines": {
 		"vscode": "^1.52.0"
 	},
@@ -13,12 +13,12 @@
 		"Snippets"
 	],
 	"keywords": [
-		"pascal",
 		"delphi",
+		"fpc",
 		"freepascal",
 		"lazarus",
 		"pas2js",
-		"fpc"
+		"pascal"
 	],
 	"license": "SEE LICENSE IN ./LICENSE.md",
 	"repository": {
@@ -36,18 +36,18 @@
 			{
 				"id": "objectpascal",
 				"extensions": [
-					".pas",
-					".pp",
 					".lpr",
-					".inc"
+					".inc",
+					".pas",
+					".pp"
 				],
 				"aliases": [
 					"ObjectPascal",
 					"Pascal"
 				],
 				"mimetypes": [
-					"text/x-objectpascal-source",
-					"text/x-objectpascal"
+					"text/x-objectpascal",
+					"text/x-objectpascal-source"
 				]
 			}
 		],
@@ -99,7 +99,7 @@
 			},
 			{
 				"command": "freepascal.codeIndentation",
-				"title": "Freepascal: Code formatting..."
+				"title": "Freepascal: Code indentation..."
 			},
 			{
 				"command": "freepascal.codeRefactoring",

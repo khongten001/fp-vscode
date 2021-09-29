@@ -1,59 +1,64 @@
-## Freepascal support for Visual Studio Code
 ![logo](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/icon.png)
 
-### Features 
-Project new... (CTR+N)
-![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/projectcreation.gif) 
+[![donate](https://img.shields.io/badge/Licence-MIT-green.svg)](LICENSE.md) [![donate](https://img.shields.io/badge/Donate-PayPal-red.svg)](https://www.paypal.com/donate?business=VCWLMY6L2ER7A&currency_code=USD) [![donate](https://img.shields.io/badge/FP--VSCODE-Marketplace-blue.svg)](https://marketplace.visualstudio.com/items?itemName=heliosroots.fp-vscode) 
 
-Project building... (F9)
-![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/projectbuilding.gif) 
 
-Project loading... (F10)
-![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/projectloading.gif) 
 
-Project settings...
-![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/projectsettings.gif) 
 
-Project completion...(Ctrl+Alt+C)
-![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codecompletion.gif) 
+# Freepascal support for Visual Studio Code
 
-Project definition...
-![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codedefinition.gif) 
+## Features 
+ - Project new... (Ctrl+N)
+![Project new](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/projectcreation.gif) 
 
-Project indentation...(Ctrl+Alt+D)
-![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codeindentation.gif) 
+ - Project building... (F9)
+![project building](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/projectbuilding.gif) 
 
-Project suggestion...
-![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codesuggestion.gif) 
+ - Project loading... (F10)
+![project loading](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/projectloading.gif) 
 
-Project refactory empty methods...(Ctrl+Alt+R)
-![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/coderefactoryemptymethods.gif) 
+ - Project loading...
+![pProject loading](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/projectsettings.gif) 
 
-Project refactory unused units...(Ctrl+Alt+R)
-![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/coderefactoryunusedunits.gif) 
+ - Code completion...(Ctrl+Alt+C)
+![code completion](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codecompletion.gif) 
 
-Project snippets
-![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codesnippets.gif)  
+ - Code definition...
+![code definition](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codedefinition.gif) 
 
-Syntax Coloring
-![project temmplate](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/syntaxcoloring.gif)  
+ - Code indentation...(Ctrl+Alt+D)
+![code indentation](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codeindentation.gif) 
 
-### Settings
+ - Code suggestion...
+![code suggestion](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codesuggestion.gif) 
+
+ - Code refactory empty methods...(Ctrl+Alt+R)
+![code refactory empty methods](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/coderefactoryemptymethods.gif) 
+
+ - Code refactory unused units...(Ctrl+Alt+R)
+![code refactory unused units](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/coderefactoryunusedunits.gif) 
+
+ - Code snippets
+![code snippets](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/codesnippets.gif)  
+
+ - Syntax coloring
+![syntax coloring](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/syntaxcoloring.gif)  
+
+## Feature to be implemented
+- Code jump
+- Code indentation(Line break)
+- Debug(GDB, FpDebug)
+- HotReload(Pas2JS) 
+
+## Settings
 ![settings](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/settings.gif)
 
-### Reporting Issues
-https://github.com/heliosroots/fp-vscode/issues
+## Reporting Issues
+https://github.com/heliosroots/fp-vscode/issues 
 
-### Donating 
-<div> 
-  <a title="Paypal" href="https://www.paypal.com/donate?business=VCWLMY6L2ER7A&currency_code=USD">
-     <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif"/>
-  </a>
-</div>  
-
-### Credits 
+## Credits 
 - Freepascal team: https://wiki.freepascal.org
 - Parmaja: https://github.com/parmaja/cliparts 
 
-### License
+## License
 [MIT](LICENSE.md) Copyright (c) 2021 Hélio S. Ribeiro

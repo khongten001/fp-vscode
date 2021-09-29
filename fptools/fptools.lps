@@ -2,14 +2,14 @@
 <CONFIG>
   <ProjectSession>
     <Version Value="12"/>
-    <BuildModes Active="Windows"/>
+    <BuildModes Active="Linux"/>
     <Units>
       <Unit>
         <Filename Value="fptools.lpr"/>
         <IsPartOfProject Value="True"/>
         <TopLine Value="37"/>
         <CursorPos X="35" Y="48"/>
-        <UsageCount Value="57"/>
+        <UsageCount Value="63"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -18,52 +18,52 @@
         <EditorIndex Value="8"/>
         <TopLine Value="42"/>
         <CursorPos X="80" Y="42"/>
-        <UsageCount Value="57"/>
+        <UsageCount Value="63"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="fptoolscodecore.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="10"/>
-        <TopLine Value="95"/>
+        <TopLine Value="116"/>
         <CursorPos X="64" Y="152"/>
-        <UsageCount Value="57"/>
+        <UsageCount Value="63"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="fptoolscodecompletation.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="52"/>
-        <CursorPos X="47" Y="50"/>
-        <UsageCount Value="57"/>
+        <TopLine Value="40"/>
+        <CursorPos X="59" Y="50"/>
+        <UsageCount Value="63"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="fptoolscodedefinition.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="9"/>
+        <TopLine Value="43"/>
         <CursorPos X="61" Y="58"/>
-        <UsageCount Value="57"/>
+        <UsageCount Value="63"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="fptoolscodeindentation.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="13"/>
-        <CursorPos X="35" Y="32"/>
-        <UsageCount Value="57"/>
+        <TopLine Value="35"/>
+        <CursorPos X="32" Y="55"/>
+        <UsageCount Value="63"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="fptoolscoderefactoring.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="103"/>
+        <TopLine Value="90"/>
         <CursorPos X="71" Y="21"/>
-        <UsageCount Value="36"/>
+        <UsageCount Value="42"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -72,26 +72,26 @@
         <EditorIndex Value="6"/>
         <TopLine Value="88"/>
         <CursorPos X="24" Y="88"/>
-        <UsageCount Value="57"/>
+        <UsageCount Value="63"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="fptoolsprojectbuilding.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="56"/>
-        <CursorPos X="35" Y="56"/>
-        <UsageCount Value="47"/>
+        <TopLine Value="25"/>
+        <CursorPos X="52" Y="71"/>
+        <UsageCount Value="53"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="fptoolsprojectcreation.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="9"/>
-        <TopLine Value="208"/>
-        <CursorPos X="42" Y="26"/>
-        <UsageCount Value="56"/>
+        <TopLine Value="246"/>
+        <CursorPos X="50" Y="74"/>
+        <UsageCount Value="62"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -99,7 +99,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="11"/>
         <CursorPos X="23" Y="21"/>
-        <UsageCount Value="54"/>
+        <UsageCount Value="60"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -107,7 +107,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="779"/>
         <CursorPos X="3" Y="794"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="../../fpc/trunk/lazarus/components/codetools/codetree.pas"/>
@@ -115,7 +115,7 @@
         <EditorIndex Value="7"/>
         <TopLine Value="126"/>
         <CursorPos Y="137"/>
-        <UsageCount Value="17"/>
+        <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -124,46 +124,10 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="144"/>
         <CursorPos X="14" Y="153"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="fptoolsutils.pas"/>
-        <Caret Line="173" Column="24" TopLine="143"/>
-      </Position>
-      <Position>
-        <Filename Value="fptoolsutils.pas"/>
-        <Caret Line="40" Column="85" TopLine="29"/>
-      </Position>
-      <Position>
-        <Filename Value="fptoolsutils.pas"/>
-        <Caret Line="149" Column="32" TopLine="137"/>
-      </Position>
-      <Position>
-        <Filename Value="fptoolsutils.pas"/>
-        <Caret Line="40" Column="11" TopLine="27"/>
-      </Position>
-      <Position>
-        <Filename Value="fptoolsprojectcreation.pas"/>
-        <Caret Line="167" Column="53" TopLine="151"/>
-      </Position>
-      <Position>
-        <Filename Value="fptoolscodecore.pas"/>
-        <Caret Line="74" Column="24" TopLine="65"/>
-      </Position>
-      <Position>
-        <Filename Value="fptoolscodesuggestion.pas"/>
-        <Caret Line="78" Column="48" TopLine="57"/>
-      </Position>
-      <Position>
-        <Filename Value="fptoolsprojectbuilding.pas"/>
-        <Caret Line="10" Column="26"/>
-      </Position>
-      <Position>
-        <Filename Value="fptoolsprojectbuilding.pas"/>
-        <Caret Line="46" Column="21" TopLine="41"/>
-      </Position>
       <Position>
         <Filename Value="fptoolsprojectbuilding.pas"/>
         <Caret Line="22" Column="37" TopLine="19"/>
@@ -247,6 +211,42 @@
       <Position>
         <Filename Value="fptoolsprojectcreation.pas"/>
         <Caret Line="201" Column="43" TopLine="189"/>
+      </Position>
+      <Position>
+        <Filename Value="fptoolsprojectcreation.pas"/>
+        <Caret Line="247" Column="58" TopLine="86"/>
+      </Position>
+      <Position>
+        <Filename Value="fptoolsprojectcreation.pas"/>
+        <Caret Line="100" Column="57" TopLine="240"/>
+      </Position>
+      <Position>
+        <Filename Value="fptoolsprojectcreation.pas"/>
+        <Caret Line="218" Column="61" TopLine="208"/>
+      </Position>
+      <Position>
+        <Filename Value="fptoolsprojectcreation.pas"/>
+        <Caret Line="188" Column="52" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="fptoolsprojectcreation.pas"/>
+        <Caret Line="66" Column="27" TopLine="51"/>
+      </Position>
+      <Position>
+        <Filename Value="fptoolsprojectcreation.pas"/>
+        <Caret Line="290" Column="7" TopLine="269"/>
+      </Position>
+      <Position>
+        <Filename Value="fptoolsprojectcreation.pas"/>
+        <Caret Line="72" Column="49" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="fptoolsprojectcreation.pas"/>
+        <Caret Line="238" Column="56" TopLine="217"/>
+      </Position>
+      <Position>
+        <Filename Value="fptoolsprojectcreation.pas"/>
+        <Caret Line="43" Column="10" TopLine="28"/>
       </Position>
     </JumpHistory>
     <RunParams>

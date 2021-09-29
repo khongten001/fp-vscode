@@ -72,7 +72,7 @@ const runTask = async (command, name, problemMatchers) => {
 
 const editorAddContent = (editor, content, newLine, newColumn) => {
     return new Promise(async (resolve) => {
-        let result = await editor.edit((builder) => {
+        let result = await editor.edit(builder => {
             builder.replace(
                 new vscode.Range(0, 0, Number.MAX_VALUE, Number.MAX_VALUE), 
                 content

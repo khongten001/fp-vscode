@@ -1,10 +1,7 @@
 const { showError, runTask } = require("./utils");
-const { project, runFpTools } = require("./fptools");
+const { runFpTools } = require("./fptools");
 
-const projectBuilding = async () => { 
-    if (!project.settings) {
-        return showError("No project settings selected");
-    };
+const projectBuilding = async () => {  
     let response = await runFpTools({
         action: "projectBuilding"
     });

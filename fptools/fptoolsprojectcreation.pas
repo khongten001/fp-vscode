@@ -40,6 +40,40 @@ begin
   Result += 'end.';
 end;
 
+function TemplateProjectHttpServer(AName, AType: string): string;
+
+  function ServerLibs(AType: string): string;
+  begin
+    case AType of
+      'CGI': Result := 'fpcgi';
+      'FASTCGI': Result := 'fpfcgi';
+      'StandAlone': Result := 'fphttpapp';
+    end;
+  end;
+
+begin
+  Result := 'program ' + AName + ';' + LE + LE;
+  Result += '{$mode objfpc}{$H+}' + LE + LE;
+  Result += 'uses' + LE;
+  Result += '  {$ifdef UNIX}' + LE;
+  Result += '  cthreads,' + LE;
+  Result += '  {$endif}' + LE;
+  Result += '  Classes,' + LE;
+  Result += '  ' + ServerLibs(AType) + ',' + LE;
+  Result += '  HTTPDefs,' + LE;
+  Result += '  HTTPRoute;' + LE + LE;
+  Result += '  procedure Ping(ARequest: TRequest; AResponse: TResponse);' + LE;
+  Result += '  begin' + LE;
+  Result += '    AResponse.Content := ''Pong'';' + LE;
+  Result += '  end;' + LE + LE;
+  Result += 'begin' + LE;
+  Result += '  HTTPRouter.RegisterRoute(''Ping'', @Ping, True);' + LE + LE;
+  Result += '  Application.Title := ''' + AName + ''';' + LE;
+  Result += Ternary(AType = 'StandAlone', '  Application.Port := 8080;' + LE, '');
+  Result += '  Application.Run;' + LE;
+  Result += 'end.';
+end;
+
 function TemplateHtml(AName: string): string;
 begin
   Result := '<!doctype html>' + LE;
@@ -80,6 +114,35 @@ begin
   end;
   // Save
   WriteFile(VProject, TemplateProject(AName));
+  WriteFile(VSettings, TemplateSettings(AName, '', ''));
+  VResponse := TJSONObject.Create();
+  VResponse.Add('project', VProject);
+  VResponse.Add('settings', VSettings);
+  WriteStdout(VResponse, True);
+end;
+
+procedure CreateAplicationHttpServer(ADir, AName, AType: string);
+var
+  VProject: string;
+  VSettings: string;
+  VResponse: TJSONObject;
+begin
+  if (not (DirectoryIsWritable(ADir))) then
+  begin
+    WriteStdout('Invalid project directory: "' + ADir + '"');
+  end;
+  VProject := AppendPathDelim(ADir) + AName + '.lpr';
+  if (FileExistsUTF8(VProject)) then
+  begin
+    WriteStdout(AName + '.lpr already exists');
+  end;
+  VSettings := AppendPathDelim(ADir) + AName + '.lpr.json';
+  if (FileExistsUTF8(VSettings)) then
+  begin
+    WriteStdout(AName + '.lpr.json already exists');
+  end;
+  // Save
+  WriteFile(VProject, TemplateProjectHttpServer(AName, AType));
   WriteFile(VSettings, TemplateSettings(AName, '', ''));
   VResponse := TJSONObject.Create();
   VResponse.Add('project', VProject);
@@ -182,7 +245,6 @@ begin
   WriteStdout(VResponse, True);
 end;
 
-
 procedure CreateSettings(ADir, AName: string);
 var
   VSettings: string;
@@ -214,11 +276,22 @@ begin
   VName := ARequest.Path('command.project.name', '');
   VTemplate := ARequest.Path('command.project.template', '');
   case VTemplate of
-    'Application': CreateAplication(VDir, VName);
-    'Application Node': CreateAplicationNode(VDir, VName);
-    'Application Web Browser': CreateAplicationWebBrowser(VDir, VName);
-    'Library': CreateLibrary(VDir, VName);
-    'Settings': CreateSettings(VDir, VName);
+    'Application':
+      CreateAplication(VDir, VName);
+    'Application Http Server(CGI)':
+      CreateAplicationHttpServer(VDir, VName, 'CGI');
+    'Application Http Server(FastCGI)':
+      CreateAplicationHttpServer(VDir, VName, 'FastCGI');
+    'Application Http Server(StandAlone)':
+      CreateAplicationHttpServer(VDir, VName, 'StandAlone');
+    'Application Node':
+      CreateAplicationNode(VDir, VName);
+    'Application Web Browser':
+      CreateAplicationWebBrowser(VDir, VName);
+    'Library':
+      CreateLibrary(VDir, VName);
+    'Settings':
+      CreateSettings(VDir, VName);
     else
     begin
       WriteStdout('Invalid project template');

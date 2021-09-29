@@ -13,6 +13,9 @@ const projectCreation = async () => {
         "Select a template...",
         [
             "Application",
+            "Application Http Server(CGI)",
+            "Application Http Server(FastCGI)",
+            "Application Http Server(StandAlone)",
             "Application Node",
             "Application Web Browser",
             "Library",
