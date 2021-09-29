@@ -9,25 +9,25 @@
         <IsPartOfProject Value="True"/>
         <TopLine Value="37"/>
         <CursorPos X="35" Y="48"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="71"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="fptoolsutils.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="8"/>
+        <EditorIndex Value="9"/>
         <TopLine Value="42"/>
         <CursorPos X="80" Y="42"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="71"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="fptoolscodecore.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="10"/>
+        <EditorIndex Value="11"/>
         <TopLine Value="116"/>
         <CursorPos X="64" Y="152"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="71"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -36,25 +36,25 @@
         <EditorIndex Value="3"/>
         <TopLine Value="40"/>
         <CursorPos X="59" Y="50"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="71"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="fptoolscodedefinition.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="5"/>
         <TopLine Value="43"/>
         <CursorPos X="61" Y="58"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="71"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="fptoolscodeindentation.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="6"/>
         <TopLine Value="35"/>
         <CursorPos X="32" Y="55"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="71"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -63,16 +63,16 @@
         <EditorIndex Value="2"/>
         <TopLine Value="90"/>
         <CursorPos X="71" Y="21"/>
-        <UsageCount Value="42"/>
+        <UsageCount Value="50"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="fptoolscodesuggestion.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="7"/>
         <TopLine Value="88"/>
         <CursorPos X="24" Y="88"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="71"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -81,25 +81,24 @@
         <EditorIndex Value="1"/>
         <TopLine Value="25"/>
         <CursorPos X="52" Y="71"/>
-        <UsageCount Value="53"/>
+        <UsageCount Value="61"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="fptoolsprojectcreation.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="9"/>
-        <TopLine Value="246"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="108"/>
         <CursorPos X="50" Y="74"/>
-        <UsageCount Value="62"/>
+        <UsageCount Value="70"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="fptoolsprojectsettings.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="11"/>
+        <EditorIndex Value="12"/>
         <CursorPos X="23" Y="21"/>
-        <UsageCount Value="60"/>
+        <UsageCount Value="68"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -112,10 +111,10 @@
       <Unit>
         <Filename Value="../../fpc/trunk/lazarus/components/codetools/codetree.pas"/>
         <UnitName Value="CodeTree"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="8"/>
         <TopLine Value="126"/>
         <CursorPos Y="137"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -126,12 +125,18 @@
         <CursorPos X="14" Y="153"/>
         <UsageCount Value="8"/>
       </Unit>
+      <Unit>
+        <Filename Value="../../fpc/trunk/lazarus/components/codetools/codetoolmanager.pas"/>
+        <UnitName Value="CodeToolManager"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="514"/>
+        <CursorPos X="14" Y="601"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="fptoolsprojectbuilding.pas"/>
-        <Caret Line="22" Column="37" TopLine="19"/>
-      </Position>
       <Position>
         <Filename Value="fptoolsutils.pas"/>
         <Caret Line="36" Column="10" TopLine="25"/>
@@ -247,6 +252,10 @@
       <Position>
         <Filename Value="fptoolsprojectcreation.pas"/>
         <Caret Line="43" Column="10" TopLine="28"/>
+      </Position>
+      <Position>
+        <Filename Value="fptoolscodecompletation.pas"/>
+        <Caret Line="50" Column="59" TopLine="40"/>
       </Position>
     </JumpHistory>
     <RunParams>

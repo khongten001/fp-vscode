@@ -1,9 +1,6 @@
 ![logo](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/icon.png)
 
-[![donate](https://img.shields.io/badge/Licence-MIT-green.svg)](LICENSE.md) [![donate](https://img.shields.io/badge/Donate-PayPal-red.svg)](https://www.paypal.com/donate?business=VCWLMY6L2ER7A&currency_code=USD) [![donate](https://img.shields.io/badge/FP--VSCODE-Marketplace-blue.svg)](https://marketplace.visualstudio.com/items?itemName=heliosroots.fp-vscode) 
-
-
-
+[![donate](https://img.shields.io/badge/Licence-MIT-green.svg)](LICENSE.md) [![donate](https://img.shields.io/badge/Donate-PayPal-red.svg)](https://www.paypal.com/donate?business=VCWLMY6L2ER7A&currency_code=USD) [![donate](https://img.shields.io/badge/FP--VSCODE-Marketplace-blue.svg)](https://marketplace.visualstudio.com/items?itemName=heliosroots.fp-vscode)  
 
 # Freepascal support for Visual Studio Code
 
@@ -54,11 +51,8 @@
 ![settings](https://raw.githubusercontent.com/heliosroots/fp-vscode/master/images/help/settings.gif)
 
 ## Reporting Issues
-https://github.com/heliosroots/fp-vscode/issues 
+- [Issues](https://github.com/heliosroots/fp-vscode/issues)
 
 ## Credits 
-- Freepascal team: https://wiki.freepascal.org
-- Parmaja: https://github.com/parmaja/cliparts 
-
-## License
-[MIT](LICENSE.md) Copyright (c) 2021 Hélio S. Ribeiro
+- [Freepascal team](https://wiki.freepascal.org)
+- [Parmaja](https://github.com/parmaja/cliparts)
